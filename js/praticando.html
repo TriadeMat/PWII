@@ -9,18 +9,47 @@
 
     <script>
 // passo a passo
-
+/*
 // "let" para valores que vao mudar
        let nomeAluno = "Maria";
        let idade = 20;
         idade = 21; //posso alterar depois
-    //2."const" para valores fixos
+    //2."const" para valores fixosf
         const TAXAS_JUROS = 0.05;
         //TAXA_JUROS =0.10; ERRO! const não pode mudar
 
         //3.Exibindo no console do navegador (F12)
         console.log(nomeAluno); //-> "Maria"
-        console.log(idade); //->21
+        console.log(idade); //->21    
+      */  
+        
+        //---TIPOS PRIMITIVOS----------
+        //1 String--texto, sempre entre aspas
+        let nome = "Ana"; //aspas duplas
+        let cidade = 'São Paulo' //aspas simples
+        let menssagem = `Olá, ${nome}!`; //template literal(moderno)
+        console.log(mensagem);//->"Olá, Ana!"
+        
+        //2 Number - números(inteiros e decimais)
+        let pontos = 100;
+        let temperatura = 36.7;
+        let saldo = -50;//pode ser negativo
+
+        //3. Boolean - verdadeiro ou Falso
+        let estaLogado = true;
+        let temDesconto = false;
+
+        //4. UnderFined - varíavel declarada mas sem valor
+        let resultado;
+        console.log(resultado);//-> underfined
+
+        //5. Null - ausência intencional de valor
+        let usuarioAtivo = null;
+
+        //Descobrir o tipo de qualquer valor
+        console.log(typeof nome); //-> "String"
+        console.log(typeof pontos); //-> "number"
+        console.log(typeof estaLogado); //-> "boolean"
     </script>
     
 </body>
