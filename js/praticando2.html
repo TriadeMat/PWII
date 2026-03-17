@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // Operadores Aritiméicos
+       /*
+       let a = 10, b = 3;
+    console.log(a + b); // -> 13 (adição)
+    console.log(a - b); // -> 7 (subtração)
+    console.log(a * b); // -> 30 (multiplicação)
+    console.log(a / b); // -> 3.33 (divisão)
+    console.log(a % b); // -> 1 (resto da divisão)
+    console.log(a ** b); // -> 1000 (potência: 10²)
+    
+    //operadores de Comparação
+    
+    console.log(5 === 5); // -> true (igual)
+    console.log(5 !== 3); // -> true (Diferente)
+    console.log(10 > 8); // -> true (maior)
+    console.log(5 <= 5); // -> true (menor e igual)
+    
+    //Cuidado: == vs ===
+    console.log(5 == "5"); // -> true (faz a conversão automático)
+    console.log(5 === "5"); // -> true (mais rigoroso, prefiria este!)
+
+    //Operadores Lógicos
+    console.log(true && false); // -> false (E; ambos precisam ser true)
+    console.log(true || false); // -> true (OU: basta um ser true)
+    console.log(!true); // -> false (NÃO: inverte o valor)
+
+    // Concatenação de Strings
+    let primeiroNome = "João"
+    let Sobreonome = "Silva"
+    let nomeCompleto = primeiroNome + "" + sobrenome;
+    console.log(nomecompleto);// -> "João Silva"
+    
+    //pesquisa Terak 25 curiosidade apenas não tem relação com a aula.
+    
+    // Forma moderna com template literals
+    console.log(`Nome: ${primeiroNome} ${sobrenome} `); // -> "Nome: João Silva"
+
+    // Forma Clássica (Function Declaration)
+    function saudar (nome) {
+        return `Ola, ${nome}! Bem-Vindo ao JavaScript!`;
+    }
+
+    //Chamando a função
+    let mensagem = saudar("Ana");
+    console.log(mensagem);//-> "Olá, Ana! Bem-Vindo ao JavaScript!"
+    console.log(saudar("Carlos"));//"Olá, Carlos! Bem-Vindo..."
+
+    //Função com múltiplos parâmetros
+    function calcularArea(largura, altura){
+        let area = largura * altura;
+        return area;
+    }
+    
+    console.log(calcularArea(5,3));//-> 15
+    console.log(calcularArea(10,4));//-> 40
+
+    //Arrow function (forma moderna)
+    const dobrar = (numero) => numero * 2;
+    console.log(dobrar(7));//-> 14
+     
+    //Arrow fuction com múltiplas linhas
+    const somar = (a, b) => {
+        let resultado = a + b;
+        return resultado;
+    };
+    console.log(somar(4, 6));//-> 10
+
+    //Escopo Global vc . Local
+    let nome = "Global";
+
+    function minhaFuncao(){
+        let sobrenome = "Local"; // <- Só existe aqui dentro
+        console.log(nome); // -> "Global" (função acessa o externo)
+        console.log(sobrenome);//-> "Local"
+
+    }
+
+    minhaFuncao();
+    console.log(nome); //-> "Global"
+    //console.log(sobrenome); Erro!sobrenome não existe aqui
+
+    // Escopo de Bloco(let e const)
+    if (true){
+        let dentroDoif = "Só aqui";
+        console.log(dentroDoif); //->"Só aqui"
+    }
+// console.log(dentroDoif); Erro! fora do bloco
+*/
+//exercicio 01 calcular o imc de uma pessoa com peso = 70 e altura = 1.75
+let peso = 70, altura = 1.75
+undefined
+let imc = `O indice de massa corporal é: ${peso/(altura**2)}`;
+//imc = `O indice de massa corporal é: ${imc.toFixed(1)}`;
+    </script>
+
+
+</body>
+</html>
