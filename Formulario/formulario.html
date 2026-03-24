@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Formulário Básico</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Formulário</h2>
         <h1>Preencha os campos abaixo com suas informações para se cadastrar em nosso banco de talentos!</h1>
-        <P>É importante que nenhum campo fique em branco para facilitar nosso contato com você.</P>     
-                <input type="text" id="nomeDigitado" placeholder="Nome"><br><br>
-                <input type="text" id="emailDigitado" placeholder="Email"><br><br>
-                <input type="text" id="endereçoDigitado" placeholder="Endereço"><br><br>
-            <button onclick="validarFormulario()">Enviar</button>
+        <P>É importante que nenhum campo fique em branco para facilitar nosso contato com você.</P>
+        <form action="process.php" method="post">
+            <input type="text" name="nome" id="nomeDigitado" placeholder="Nome"><br><br>
+            <input type="text" name="email" id="emailDigitado" placeholder="Email"><br><br>
+            <input type="text" name="endereco" id="endereçoDigitado" placeholder="Endereço"><br><br>
+            <button type="submit" onclick="validarFormulario()">Enviar</button>
+            <!--
+             type="submit" dentro de um <form> enviar os dados ao action.
+             O onclick ainda chama validarFormulario() antes de enviar -
+             se a função retornar false, o envio é cancelado.   
+             -->
+        </form>
     </div>
     <script>
         //Objeto para pegar a referencia do campo de texto
         //colocando o foco no campo de nome facilita o preenchimento do formulario
         document.getElementById("nomeDigitado").focus();
-        
-        function validarFormulario(){
+
+        function validarFormulario() {
             let nome = document.getElementById("nomeDigitado").value;
             let Email = document.getElementById("emailDigitado").value;
             let Endereço = document.getElementById("endereçoDigitado").value;
-           
-            
-                
-                if((nome === "") && (Email === "") && (Endereço === "")){
-                    alert("Preencha todos os campos")
+
+
+
+            if ((nome === "") && (Email === "") && (Endereço === "")) {
+                alert("Preencha todos os campos")
                 document.getElementById("nomeDigitado").style.boxShadow = "3px 3px 5px 3px red"
                 document.getElementById("emailDigitado").style.boxShadow = "3px 3px 5px 3px red"
-                document.getElementById("endereçoDigitado").style.boxShadow = "3px 3px 5px 3px red"          
-              }else if ((nome === "")  ){
+                document.getElementById("endereçoDigitado").style.boxShadow = "3px 3px 5px 3px red"
+            } else if ((nome === "")) {
                 alert("Preencha o campo Nome")
                 document.getElementById("nomeDigitado").style.boxShadow = "3px 3px 5px 3px red"
-                     return false;
-              }
-             else if ((Email === "") ){
+                return false;
+            }
+            else if ((Email === "")) {
                 alert("Preencha o campo Email")
                 document.getElementById("emailDigitado").style.boxShadow = "3px 3px 5px 3px red"
-                     return false;   
-             }else if ((Endereço === "") ){
+                return false;
+            } else if ((Endereço === "")) {
                 alert("Preencha o campos Endareço")
                 document.getElementById("endereçoDigitado").style.boxShadow = "3px 3px 5px 3px red"
-                     return false;
-              }else if ((nome !== "") && (Email !== "") && (Endereço !== "")) {
-                alert("Você completo o formulario Parabens!!" )
+                return false;
+            } else if ((nome !== "") && (Email !== "") && (Endereço !== "")) {
+                alert("Você completo o formulario Parabens!!")
                 document.getElementById("nomeDigitado").style.boxShadow = "3px 3px 5px 3px green"
                 document.getElementById("emailDigitado").style.boxShadow = "3px 3px 5px 3px green"
-                document.getElementById("endereçoDigitado").style.boxShadow = "3px 3px 5px 3px green"       
-                return true
-              }else{}
-        
-           
+                document.getElementById("endereçoDigitado").style.boxShadow = "3px 3px 5px 3px green"
 
-       
-    
-    }    
+            } else { }
+
+
+
+
+            return true
+        }
 
     </script>
 </body>
+
 </html>
