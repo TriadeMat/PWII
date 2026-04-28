@@ -16,7 +16,21 @@
             <input type="text" name="nome" id="nomeDigitado" placeholder="Nome"><br><br>
             <input type="text" name="email" id="emailDigitado" placeholder="Email"><br><br>
             <input type="text" name="endereco" id="endereçoDigitado" placeholder="Endereço"><br><br>
-            <button type="submit" onclick="validarFormulario()">Enviar</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <a class="bnt-validar" type="submit" onclick="validarFormulario()">
+                                <button class="bnt-validar">Enviar</button></a>
+                        </th>
+                        <th>
+                            <a href="cosulta.html" class=consulta-bnt>
+                                <h3>Consulta</h3>
+                            </a>
+                            </th>
+                    </tr>
+                </thead>
+            </table>
             <!--
              type="submit" dentro de um <form> enviar os dados ao action.
              O onclick ainda chama validarFormulario() antes de enviar -

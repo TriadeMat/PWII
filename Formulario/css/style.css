@@ -7,16 +7,25 @@ body {
     margin: 0;
     height: 100vh;
 }
+
 .container {
     background: #d9d9d9;
     padding: 40px 30px;
     border-radius: 40px 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
     text-emphasis: center;
+    height: 600px;
 }
+
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
 .h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -24,31 +33,46 @@ body {
     font-weight: bold;
     line-height: 1.5;
 }
-p{
+
+p {
     font-size: 14px;
     color: red;
     margin-bottom: 30px;
     line-height: 1.5;
 }
-h1{
+
+h1 {
     font-size: 14px;
     color: rgb(0, 0, 0);
     margin-bottom: 30px;
-    line-height: 1.5;}
-input{
+    line-height: 1.5;
+}
+
+input {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 14px;
 }
+
+.input2 {
+
+    width: 80%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-left: 10px;
+    /* Garante que o padding não quebre a largura */
+}
+
 button {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     background: #4a90e2;
     border: none;
     border-radius: 6px 10px;
-   
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -57,5 +81,63 @@ button {
 
 button:hover {
     background: #17426d;
+
 }
- 
+
+h3 {
+    width: 100%;
+    padding: 8px;
+    background: #4a90e2;
+    border: none;
+    border-radius: 6px 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+h3:hover {
+    background: #17426d;
+
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    padding: 2px;
+}
+
+#status {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    display: none;
+    font-size: 0.9rem;
+}
+
+.error {
+    background-color: #fdeaea;
+    color: var(--error-color);
+    border: 1px solid #fad2d2;
+}
+
+.success {
+    background-color: #eafaf1;
+    color: var(--success-color);
+    border: 1px solid #d5f5e3;
+}
+
+.dados-box {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.dados-item {
+    margin-bottom: 0.5rem;
+}
+
+.dados-item strong {
+    color: #555;
+}
