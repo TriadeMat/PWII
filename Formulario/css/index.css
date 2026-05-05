@@ -1,0 +1,33 @@
+ :root {
+            --primary-color: #4a90e2;
+            --primary-hover: #357abd;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            padding: 2rem 0;
+        }
+
+        /* Centraliza e limita a largura dos cards */
+        .main-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .card-custom {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem; /* Espaço entre os cards */
+        }
+
+        h2 { color: var(--primary-color); margin-bottom: 1.5rem; }
+        
+        .btn-primary { background-color: var(--primary-color); border: none; }
+        .btn-primary:hover { background-color: var(--primary-hover); }
+
+        #tabelaResultado { display: none; }
+        .instrucoes { font-size: 0.9rem; color: #666; }

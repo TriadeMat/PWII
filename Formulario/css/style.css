@@ -8,6 +8,27 @@ body {
     height: 100vh;
 }
 
+.dados-item strong {
+    color: #555;
+}
+
+/*Tabela de resultados*/
+#tabelaResultado {
+    display: none;
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+
+#tabelaResultado table {
+    font-size: 0.85rem;
+}
+
+#tableResultado th {
+    background-color: var(--primary-color);
+    color: #fff;
+    white-space: nowrap;
+}
+
 .container {
     background: #d9d9d9;
     padding: 40px 30px;
@@ -17,7 +38,6 @@ body {
     max-width: 400px;
     box-sizing: border-box;
     text-emphasis: center;
-    height: 600px;
 }
 
 
