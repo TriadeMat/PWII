@@ -2,7 +2,8 @@
 require_once 'conexao.php';
 
 //PASSO 1 - Responde sempre em JSON (sem HTML)
-header ('Content-Type: application/json; charset=utf-8');
+ header('Location: index.html');
+    
 
 //PASSO 2 - Garante que veio de um formulário
 if($_SERVER['REQUEST_METHOD'] !== 'POST'){
@@ -65,7 +66,7 @@ try{
         'sucesso' => true,
         'mensagem'=> 'Cadastro salvo com sucesso!',
         'id' =>(int) $pdo->lastInsertId(),
-    ]);
+    ]); 
 }catch (PDOException $e) {
     http_response_code(500);
     echo json_encode(['sucesso' => false, 'erro' => $e ->getMessage()]);
