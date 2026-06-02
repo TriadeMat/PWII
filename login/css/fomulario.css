@@ -68,7 +68,7 @@ p {
     margin-bottom: 30px;
     line-height: 1.6;
 }
- body {
+  body {
             height: auto;
             min-height: 100vh;
             padding: 2rem 1rem;
@@ -120,3 +120,4 @@ p {
         }
 
         .icone { margin-right: 6px; }
+    
