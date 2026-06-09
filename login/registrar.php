@@ -60,6 +60,28 @@ email = :email');
 $stmt->execute([':email' => $email]);
 
 if($stmt->fetch()){
-    
+    http_response_code(409);
+    exit(json_encode(['sucesso' => false, 'erros' => ['Este e-mail já está cadastro.']]));
 }
+
+// ═══════════════════════════════════════════════
+//  PASSO 6 — Salva o usuário com senha criptografada
+// ═══════════════════════════════════════════════
+ $hash = password_hash($senha, PASSWORD_BCRYPT);
+
+ $stmt = $pdo->prepare('INSERT INTO `usuario`(nome, email, senha)VALUE(:nome, :email, :senha)');
+ $stmt->execute([':nome' => $nome, ':email' => $email, ':senha' => $hash]);
+
+ // ═══════════════════════════════════════════════
+//  PASSO 7 — Retorna sucesso
+// ═══════════════════════════════════════════════
+ echo json_encode([
+    'sucesso'  => true,
+    'mensagem' => 'Cadastro realizado com sucesso!',
+    'id'       => (int) $pdo->lastInsertId(),
+ ]);
+ 
+} catch (PDOException $e){
+    http_response_code(500);
+    echo json_encode(['sucesso' => false, 'erro' => $egetMessage()]);
 }
